@@ -46,7 +46,7 @@ const Main = () => {
         <section className='main-top-listing container section'>
           <div className='main-top-listing-title'>
             <h1>Top Listing</h1>
-            <p>View All 116 Top Listings <span><ArrowRight size="16" color="#AE46FF"/></span></p>
+            <p><span className='listing-head'>View All 116 Top Listings</span> <span><ArrowRight size="16" color="#AE46FF"/></span></p>
           </div>
           <div className='main-top-listing-tile grid'>
             <Tile
@@ -78,7 +78,7 @@ const Main = () => {
         <section className='main-top-listing container section'>
           <div className='main-top-listing-title'>
             <h1>New Listing</h1>
-            <p>View All 200 New Listings <span><ArrowRight size="16" color="#AE46FF"/></span></p>
+            <p><span className='listing-head'>View All 200 New Listings</span> <span><ArrowRight size="16" color="#AE46FF"/></span></p>
           </div>
           <div className='main-top-listing-tile grid'>
             <Tile
