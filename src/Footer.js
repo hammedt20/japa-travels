@@ -1,68 +1,56 @@
 import React from 'react'
-import { Youtube,Facebook,Instagram } from 'iconsax-react'
-import twitter from './Vector (3).png'
-import linkedn from './Vector (4).png'
-import logo from './PREX Logo (2).png'
+import { Copyright, Facebook, Global, Instagram, Whatsapp } from 'iconsax-react'
 import './styles.css'
 
 const Footer = () => {
   return (
-    <footer className='footer'>
-        <section className='footer-list grid container'>
-          <ul>
-            <li className='footer-list-title'>Products</li>
-            <li>PREX Listing</li>
-            <li>PREX Search</li>
-            <li>PREX eMARS</li>
-            <li>PREX Pay</li>
-            <li>PREX Registry</li>
-            <li>PREX Transact</li>
-            <li>PREX Market Date</li>
+    <div className=' section container'>
+      <div className='footer grid'>
+        <div className='footer-list'>
+          <h1 className='nav-logo'><Global size="32" color="#e4a54a"/> Japa Travels</h1>
+          <ul className='icon-list'>
+            <li><Whatsapp size='32' color='#E4A54A' variant='bold'/></li>
+            <li><Facebook size='32' color='#E4A54A' variant='bold'/></li>
+            <li><Instagram size='32' color='#E4A54A' variant='bold'/></li>
           </ul>
+        </div>
+        <div className='footer-list'>
+          <h1>Company</h1>
           <ul>
-            <li className='footer-list-title'>Company</li>
             <li>About Us</li>
-            <li>Why PREX?</li>
+            <li>Destination</li>
+            <li>Packages</li>
+            <li>Contacts</li>
+          </ul>
+        </div>
+        <div className='footer-list'>
+          <h1>Help</h1>
+          <ul>
+            <li>Help</li>
+            <li>FAQ</li>
             <li>Press</li>
-            <li>Career</li>
           </ul>
+        </div>
+        <div className='footer-list'>
+          <h1>More</h1>
           <ul>
-            <li className='footer-list-title'>Resources</li>
-            <li>Blog</li>
-            <li>Media Kit</li>
+            <li>Domestic Flights</li>
+            <li>Investor Relation</li>
+            <li>Partnership</li>
+            <li>Job</li>
           </ul>
+        </div>
+        <div className='footer-list'>
+          <h1>Terms</h1>
           <ul>
-            <li className='footer-list-title'>Support</li>
-            <li>Help Desk</li>
-            <li>FAQs</li>
+            <li>Private Policy</li>
+            <li>Terms of Service</li>
+            <li>Accessibility</li>
           </ul>
-          <ul>
-            <li className='footer-list-title'>Legal</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Use</li>
-            <li>Cookie Policy</li>
-          </ul>
-          <ul>
-            <li className='footer-list-title'>Contact</li>
-            <li>+234 812 345 6789</li>
-            <li>hello@prex.africa</li>
-          </ul>
-        </section>
-        <section className='footer-logo container'>
-          <img src={logo} alt='' />
-          <p>PREX is a product of Proexchange Property Limited.</p>
-        </section>
-        <section className='footer-socials container'>
-          <p>Copyright © PREX 2022. All rights reserved.</p>
-          <ul>
-            <li><Facebook size="16" color="#f9fafb" variant="Bold"/></li>
-            <li><Instagram size="16" color="#f9fafb" variant="Bold"/></li>
-            <li><img src={twitter} alt ='' /></li>
-            <li><img src={linkedn} alt ='' /></li>
-            <li><Youtube size="16" color="#f9fafb" variant="Bold"/></li>
-          </ul>
-        </section>
-    </footer>
+        </div>
+      </div>
+      <div className='footer-text'><Copyright size='32' color='#1c1e1d' variant='bold'/> Japa Travels 2022. All Rights Reserved</div>
+    </div>
   )
 }
 

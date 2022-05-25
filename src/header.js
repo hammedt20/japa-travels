@@ -1,92 +1,49 @@
 import React from 'react'
-import logo from './PREX Logo.png'
-import headerimg from './Hero Image.jpg'
-import dashboard from './Vector (5).png'
-import {ArrowDown2, UserCirlceAdd, Element4, Setting2} from 'iconsax-react'
-import {Notification, Heart, Monitor} from 'iconsax-react'
-import { LogoutCurve} from 'iconsax-react'
-import './styles.css';
+import { Global, SearchNormal1 } from 'iconsax-react'
+import './styles.css'
 
-const Navbar = () =>{
+function Navbar (){
   return (
-      <header className=' header'>
-          <nav className='container nav'>
-              <div className='nav-logo'>
-                  <img src={logo} alt='' />
-                  <ul className='nav-list'>
-                     <li>
-                       <select>
-                        <option> Company </option>
-                       </select>
-                       <ArrowDown2 size="16" color="#212529" variant="Bold"/>
-                     </li>
-                     <li>
-                       <select>
-                         <option>Products</option>
-                       </select>
-                       <ArrowDown2 size="16" color="#212529" variant="Bold"/>
-                     </li>
-                     <li>
-                       <select>
-                         <option>Resources</option>
-                       </select>
-                       <ArrowDown2 size="16" color="#212529" variant="Bold"/>
-                     </li>
-                     <li>
-                       <select>
-                         <option>Support</option>
-                       </select>
-                       <ArrowDown2 size="16" color="#212529" variant="Bold"/>
-                     </li>
-                  </ul>
-              </div>
-
-              <div >
-                  <ul className='nav-icons'>
-                    <li><Notification size="32" color="#212529" /></li>
-                    <li><img src={dashboard} alt='' /></li>
-                    <li className='nav-account' >
-                      <UserCirlceAdd size="32" color="#000000" variant="Bold"/> 
-                      Dashboard 
-                      <ArrowDown2 size="16" color="#212529" variant="Bold"/>
-                        
-                        <ul className='nav-account-list'>
-                          <li><span><Element4 size="24" color="#212529" variant="Outline"/></span> Dashboard</li>
-                          <li><span><Heart size="24" color="#212529" variant="Outline"/></span> My Saves</li>
-                          <li><span><Monitor size="24" color="#212529" variant="Outline"/></span> Support</li>
-                          <li><span><Setting2 size="24" color="#212529" variant="Outline"/></span> Settings</li>
-                          <hr/>
-                          <li><span><LogoutCurve size="24" color="#212529" variant="Outline"/></span> Log out</li>
-                        </ul>
-                      
-                    </li>
-                    <li>
-                      <button className='btn'>
-                        List Property
-                      </button>
-                    </li>
-                  </ul>
-              </div>
-          </nav>
-      </header>
+    <nav className='nav'>
+      <div className='nav-logo'><Global size="32" color="#e4a54a"/> Japa Travels</div>
+      <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Destination</li>
+        <li>contact</li>
+      </ul>
+      <button className='btn'>Book Ticket</button>
+    </nav>
   )
 }
 
 const Header = () => {
   return (
-    <div>
-        <Navbar />
-        <div className='header-slide'>
-            <img src={headerimg} alt = "" />
-            <div className='header-details'>
-              <h1>Your next property, find it.</h1>
-              <form className='header-form'>
-                <input type={'text'} placeholder='Enter an address, city, or state' />
-                <button className='btn'>Search</button>
-              </form>
-            </div>
+    <header className='header container'>
+      <Navbar />
+      <div className='header-text section'>
+        <p className='header-orange'>BEST DESTINATIONS AROUND THE WORLD</p>
+        <h1>Travel to any<br /> where in the<br /> world</h1>
+        <p className='header-blue'>We can build the vacation of your dream and make them a memorable one.</p>
+      </div>
+      <div className='header-container grid'>
+        <div>
+          <p className='container-title'>Destination</p>
+          <p className='container-text'>Paris</p>
         </div>
-    </div>
+        <div>
+          <p className='container-title'>Date</p>
+          <p className='container-text'>Select date</p>
+        </div>
+        <div>
+          <p className='container-title'>People</p>
+          <p className='container-text'>Number of people</p>
+        </div>
+        <div className='header-btn'>
+        <button><SearchNormal1 size="32" color="#fff"/></button>
+        </div>
+      </div>
+    </header>
   )
 }
 
