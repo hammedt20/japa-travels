@@ -1,18 +1,31 @@
-import React from 'react'
-import { Global, SearchNormal1 } from 'iconsax-react'
+import {React, useState} from 'react'
+import { CloseCircle, Global, HambergerMenu, SearchNormal1 } from 'iconsax-react'
 import './styles.css'
 
 function Navbar (){
+  const [showMenu, setShowMenu] = useState(false)
+
+  const toggleShowMenu = () => {
+    return setShowMenu(prevState => !prevState)
+  }
   return (
     <nav className='nav'>
       <div className='nav-logo'><Global size="32" color="#e4a54a"/> Japa Travels</div>
-      <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Destination</li>
-        <li>contact</li>
-      </ul>
-      <button className='btn'>Book Ticket</button>
+      <div className= {showMenu ? 'show-menu' : 'nav-menu'}>
+        <div className='nav-close' onClick={toggleShowMenu}>
+          <CloseCircle size="32" color="#e4a54a"/>
+        </div>
+        <ul className='nav-list'>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Destination</li>
+          <li>contact</li>
+        </ul>
+      </div>
+      <div className='header-icon'>
+        <button className='btn'>Book Ticket</button>
+        <div className='hamburger' onClick={toggleShowMenu}><HambergerMenu size="32" color="#e4a54a"/></div>
+      </div>
     </nav>
   )
 }
